@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/calzados.css">
+    <title>Calzado Imperial - Tienda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f4eb;
+        }
+/* Encabezado */
+header {
+    background-color: #5a4638;
+    color: white;
+    padding: 1rem;
+}
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+.logo h1 {
+    font-size: 1.5rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+nav ul li a.activo {
+    color: #f9a825;
+    font-weight: bold;
+}
+        /* Contenedor del título */
+        .contenedor-titulo {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .contenedor-tiene {
+            text-align: center;
+            color: blue;
+            margin-top: -10px;
+        }
+        /* Carrusel */
+        .carrusel {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 400px; /* Ajuste para bajar el carrusel */
+        }
+        .carrusel.segundo {
+            margin-top: 700px; /* Bajando el segundo carrusel */
+        }
+        .grupo, .grupo4, .grupo5, .grupo6 {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            width: 100%;
+        }
+        .grupo:nth-child(1), .grupo4 {
+            opacity: 1;
+        }
+        .grupo img, .grupo4 img, .grupo5 img {
+            width: 33%;
+            height: auto;
+        }
+        .grupo:nth-child(3) img, .grupo6 img {
+            width: 50%; /* Haciendo las imágenes más grandes */
+            height: auto;
+        }
+        @keyframes cambio {
+            0%, 20% { opacity: 1; z-index: 1; transform: translateX(0); }
+            25%, 100% { opacity: 0; z-index: 0; transform: translateX(-100%); }
+        }
+        .grupo:nth-child(1), .grupo4 { animation: cambio 15s infinite; }
+        .grupo:nth-child(2), .grupo5 { animation: cambio 15s infinite; animation-delay: 5s; }
+        .grupo:nth-child(3), .grupo6 { animation: cambio 15s infinite; animation-delay: 10s; }
+    </style>
+</head>
+<body>
+ <!-- Encabezado -->
+ <header>
+    <div class="contenedor-header">
+        <div class="logo">
+            <img src="recursos/imagen/logo.png" alt="Logo de la tienda">
+            <h1>CALZADO IMPERIAL</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Inicio.html">INICIO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="Calzados.html" class="activo">CALZADO</a></li>
+                <li><a href="tienda.html">TIENDA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li class="carrito">
+                    <a href="carrito.html">
+                        <img src="recursos/imagen/carrito.png" alt="Carrito" style="width: 24px; height: 24px;">
+                        <span class="contador">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <div class="contenedor-titulo">
+        <h1>La Empresa</h1>
+    </div>
+    <div class="contenedor-tiene">
+        <h2>Tiene variedad de productos que pueden hacer el gusto de las personas como:</h2>
+    </div>
+    <div class="carrusel">
+        <div class="grupo">
+            <img src="imagenes/amarillopasador.jpg" alt="Imagen 1">
+            <img src="Imagenes/rojopasador.jpg" alt="Imagen 2">
+            <img src="Imagenes/azulpasador.jpg" alt="Imagen 3">
+        </div>
+        <div class="grupo">
+            <img src="Imagenes/nikezapatilla.jpg" alt="Imagen 4">
+            <img src="Imagenes/adidaszapatilla.jpg" alt="Imagen 5">
+            <img src="Imagenes/pumazapatilla.jpg" alt="Imagen 6">
+        </div>
+        <div class="grupo">
+            <img src="imagenes/ambosgeneros.jpg" alt="Imagen 7">
+        </div>
+    </div>
+    <div class="carrusel segundo">
+        <div class="grupo4">
+            <img src="Imagenes/moda.jpg" alt="Imagen 1">
+            <img src="Imagenes/deporte.jpg" alt="Imagen 2">
+            <img src="Imagenes/eventos.jpg" alt="Imagen 3">
+        </div>
+        <div class="grupo5">
+            <img src="Imagenes/face.jpg" alt="Imagen 4">
+            <img src="Imagenes/insta.jpg" alt="Imagen 5">
+            <img src="Imagenes/email.jpg" alt="Imagen 6">
+        </div>
+        <div class="grupo6">
+            <img src="Imagenes/pagos.jpg" alt="Imagen 7" style="height: 470px; width: 570px;",>
+        </div>
+    </div>
+</body>
+</html>

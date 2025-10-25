@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Calzado Imperial</title>
+    <link rel="stylesheet" href="estilos/carrito.css">
+    <link rel="stylesheet" href="estilos/responsive.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="recursos/imagen/logo.png" alt="Logo de la tienda">
+                <h1>CALZADO IMPERIAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Inicio.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="Calzados.html">CALZADO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="carrito">
+                        <a href="carrito.html">
+                            <img src="recursos/imagen/carrito.png" alt="Carrito" style="width: 24px; height: 24px;">
+                            <span class="contador">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carrito -->
+    <div id="carrito-container">
+        <!-- Sección de productos -->
+        <section id="productos-carrito">
+            <h2>Carrito de Compras</h2>
+            <div id="lista-carrito">
+                <div class="item-carrito">
+                    <img src="recursos/imagen/zapatilla1.png" alt="Zapatilla Nike Air Force 1" class="img-producto">
+                    <div class="detalle">
+                        <h3>Zapatilla Nike Air Force 1</h3>
+                        <p>Precio: S/639.90</p>
+                        <p>Cantidad: 1</p>
+                        <label for="talla">Talla:</label>
+                        <select id="talla">
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                        </select>
+                        <br>
+                        <label for="color">Color Pasadores:</label>
+                        <select id="color">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="azul">Azul</option>
+                            <option value="rojo">Rojo</option>
+                            <option value="amarillo">Amarillo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>            
+        </section>
+    
+        <!-- Sección de resumen -->
+        <aside id="resumen-carrito">
+            <h2>Resumen de Compra</h2>
+            <div id="detalle-resumen">
+                <p>Productos: 1</p>
+                <p>Total: S/639.90</p>
+            </div>
+            <a href="datos-personales.html" class="continuar-compra">Continuar con la compra</a>
+        </aside>
+    </div>
+    
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Calzado Imperial. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/carrito.js"></script>
+</body>
+</html>

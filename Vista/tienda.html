@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Calzado Imperial</title>
+    <link rel="stylesheet" href="estilos/principal.css">
+    <link rel="stylesheet" href="estilos/responsive.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="recursos/imagen/logo.png" alt="Logo de la tienda">
+                <h1>CALZADO IMPERIAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Inicio.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="Calzados.html">CALZADO</a></li>
+                    <li><a href="tienda.html" class="activo">TIENDA</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="carrito">
+                        <a href="carrito.html">
+                            <img src="recursos/imagen/carrito.png" alt="Carrito" style="width: 24px; height: 24px;">
+                            <span class="contador">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Barra de filtros -->
+    <section id="barra-filtros">
+        <div id="filtros">
+            <select id="filtro-precio">
+                <option value="">-- Seleccionar precio --</option>
+                <option value="menos-200">Menos de S/200</option>
+                <option value="200-500">S/200 a S/500</option>
+                <option value="500-1000">S/500 a S/1000</option>
+                <option value="1000-2000">S/1000 a S/2000</option>
+                <option value="mas-2000">Más de S/2000</option>
+            </select>
+            <select id="filtro-genero">
+                <option value="">-- Seleccionar género --</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+            <select id="filtro-categoria">
+                <option value="">-- Seleccionar categoría --</option>
+                <option value="zapatillas">Zapatillas</option>
+                <option value="zapatos">Zapatos</option>
+            </select>
+            <select id="filtro-marca">
+                <option value="">-- Seleccionar marca --</option>
+            </select>
+        </div>
+        <div id="busqueda">
+            <input type="text" id="buscar" placeholder="Buscar productos...">
+            <img src="recursos/imagen/lupa.png" alt="Buscar" class="icono-lupa">
+        </div>
+    </section>
+
+    <!-- Filtros activos -->
+    <section id="filtros-activos"></section>
+
+    <!-- Contenedor de productos -->
+    <div id="productos-container">
+        <section id="productos">
+            <article class="producto masculino zapatillas nike">
+                <img src="recursos/imagen/zapatilla1.png" alt="Zapatilla Nike Air Force 1">
+                <h3>Zapatilla Nike Air Force 1</h3>
+                <p>Precio: S/639.90</p>
+                <button>Añadir al carrito</button>
+            </article>
+            <article class="producto masculino zapatillas adidas">
+                <img src="recursos/imagen/zapatilla2.png" alt="Zapatilla Adidas Ultraboost">
+                <h3>Zapatilla Adidas Ultraboost</h3>
+                <p>Precio: S/529.90</p>
+                <button>Añadir al carrito</button>
+            </article>
+            <article class="producto femenino zapatos clarks">
+                <img src="recursos/imagen/zapato1.png" alt="Zapato Mocasín Casual">
+                <h3>Zapato Mocasín Casual</h3>
+                <p>Precio: S/349.90</p>
+                <button>Añadir al carrito</button>
+            </article>
+            <article class="producto unisex zapatillas puma">
+                <img src="recursos/imagen/zapatilla3.png" alt="Zapatilla Puma Running">
+                <h3>Zapatilla Puma Running</h3>
+                <p>Precio: S/229.90</p>
+                <button>Añadir al carrito</button>
+            </article>
+            <article class="producto masculino zapatillas adidas">
+                <img src="recursos/imagen/zapatilla2.png" alt="Zapatilla Adidas Ultraboost">
+                <h3>Zapatilla Adidas Ultraboost</h3>
+                <p>Precio: S/529.90</p>
+                <button>Añadir al carrito</button>
+            </article>
+        </section>
+        
+    </div>
+
+    <!-- Paginación (para mostrar los productos en bloques de 4) -->
+    <div id="paginacion">
+        <button id="prev" disabled>← Anterior</button>
+        <button id="next">Siguiente →</button>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Calzado Imperial. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/tienda.js"></script>
+</body>
+</html>

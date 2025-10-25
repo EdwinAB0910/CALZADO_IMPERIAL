@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Calzado Imperial</title>
+    <link rel="stylesheet" href="estilos/principal.css">
+    <link rel="stylesheet" href="estilos/responsive.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="recursos/imagen/logo.png" alt="Logo de la tienda">
+                <h1>CALZADO IMPERIAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="calzado.html">CALZADO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="carrito">
+                        <a href="carrito.html">
+                            <img src="recursos/imagen/carrito.png" alt="Carrito" style="width: 24px; height: 24px;">
+                            <span class="contador">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main id="pago">
+        <h2>Pago</h2>
+        <!-- Resumen de datos -->
+        <section id="resumen-datos">
+            <h3>Información ingresada:</h3>
+            <p><strong>Correo:</strong> ejemplo@correo.com</p>
+            <p><strong>Documento:</strong> DNI - 12345678</p>
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>Teléfono:</strong> 987654321</p>
+            <p><strong>Dirección:</strong> Av. Ejemplo 123, Lima</p>
+            <p><strong>País:</strong> Perú</p>
+        </section>
+
+        <!-- Formulario de pago -->
+        <form action="#" method="POST">
+            <div class="form-grupo">
+                <label for="titular-tarjeta">Titular de la Tarjeta:</label>
+                <input type="text" id="titular-tarjeta" name="titular-tarjeta" required>
+            </div>
+            <div class="form-grupo">
+                <label for="numero-tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
+            </div>
+            <div class="form-grupo">
+                <label for="fecha-caducidad">Fecha de Caducidad:</label>
+                <input type="month" id="fecha-caducidad" name="fecha-caducidad" required>
+            </div>
+            <div class="form-grupo">
+                <label for="cvv">CVV:</label>
+                <input type="password" id="cvv" name="cvv" maxlength="3" required>
+            </div>
+            <div class="form-grupo">
+                <label for="comprobante">Comprobante de Pago:</label>
+                <select id="comprobante" name="comprobante" required>
+                    <option value="boleta">Boleta electrónica</option>
+                    <option value="factura">Factura electrónica</option>
+                </select>
+            </div>
+            <div class="form-botones">
+                <button type="button" onclick="window.location.href='envio.html'">Anterior</button>
+                <button type="submit" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Calzado Imperial. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para finalizar compra -->
+    <script>
+        function finalizarCompra() {
+            alert('¡Compra realizada con éxito! Revisa tu correo para más detalles.');
+            window.location.href = 'tienda.html';
+        }
+    </script>
+</body>
+</html>

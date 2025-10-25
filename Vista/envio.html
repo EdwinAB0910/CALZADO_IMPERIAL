@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envío - Calzado Imperial</title>
+    <link rel="stylesheet" href="estilos/principal.css">
+    <link rel="stylesheet" href="estilos/responsive.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="recursos/imagen/logo.png" alt="Logo de la tienda">
+                <h1>CALZADO IMPERIAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="calzado.html">CALZADO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="carrito">
+                        <a href="carrito.html">
+                            <img src="recursos/imagen/carrito.png" alt="Carrito" style="width: 24px; height: 24px;">
+                            <span class="contador">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección principal -->
+    <main id="envio">
+        <h2>Información de Envío</h2>
+        <form action="#" method="POST">
+            <div class="form-grupo">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="form-grupo">
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento" required>
+                    <option value="">Seleccionar</option>
+                    <option value="lima">Lima</option>
+                    <option value="arequipa">Arequipa</option>
+                    <option value="cusco">Cusco</option>
+                </select>
+            </div>
+            <div class="form-grupo">
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia" required>
+                    <option value="">Seleccionar</option>
+                    <option value="lima-prov">Lima</option>
+                    <option value="arequipa-prov">Arequipa</option>
+                    <option value="cusco-prov">Cusco</option>
+                </select>
+            </div>
+            <div class="form-grupo">
+                <label for="distrito">Distrito:</label>
+                <select id="distrito" name="distrito" required>
+                    <option value="">Seleccionar</option>
+                    <option value="villa-salvador">Villa El Salvador</option>
+                    <option value="miraflores">Miraflores</option>
+                    <option value="san-juan">San Juan de Lurigancho</option>
+                </select>
+            </div>
+            <div class="form-grupo">
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" value="Perú" readonly>
+            </div>
+            <div class="form-botones">
+                <button type="button" onclick="window.location.href='datos-personales.html'">Anterior</button>
+                <button type="submit" onclick="window.location.href='pago.html'">Siguiente</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Calzado Imperial. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

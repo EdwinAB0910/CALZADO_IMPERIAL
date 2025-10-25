@@ -1,0 +1,136 @@
+header {
+  background-color: #5a4638;
+  color: white;
+  padding: 1rem;
+}
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+.logo h1 {
+  font-size: 1.5rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav ul li a.activo {
+  color: #f9a825;
+  font-weight: bold;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacto_info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: start;
+  margin-left: 50px;
+}
+.formulario_contacto {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+.contacto_info .contacto_p {
+  font-family: "Montserrat", serif;
+  font-size: 20px;
+  font-weight: 550;
+  font-style: italic;
+  padding-top: 7px;
+}
+.monserrat {
+  font-family: "Montserrat", serif;
+  color: #31241e;
+}
+.poppins {
+  font-family: "Poppins", serif;
+  color: #31241e;
+}
+
+.contacto_titulo {
+  font-size: 29px;
+  margin-top: 30px;
+  height: 50px;
+}
+
+/*-- Formulario --*/
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.formulario .controls {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 20px 10px;
+  border-radius: 1px;
+  color: black;
+  background-color: #d1c8c1;
+  border: none;
+  font-family: "Montserrat", serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+.formulario .controls_area {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 150px 10px;
+  padding-top: 15px;
+  border-radius: 1px;
+  color: black;
+  background-color: #d1c8c1;
+  border: none;
+  font-family: "Montserrat", serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.formulario .boton_contacto {
+  margin-left: 420px;
+  width: 200px;
+  padding: 4px 15px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Montserrat", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #86654b;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.formulario .boton_contacto:hover {
+  background-color: hsla(40, 48%, 45%, 0.925);
+}

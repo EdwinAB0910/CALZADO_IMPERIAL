@@ -1,0 +1,303 @@
+/* Estilos generales */
+body {
+    font-family: "Montserrat", serif;
+    background-color: #f9f6f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #5a4638;
+    color: white;
+    padding: 1rem;
+}
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+.logo h1 {
+    font-size: 1.5rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+nav ul li a.activo {
+    color: #f9a825;
+    font-weight: bold;
+}
+
+/* Carrito */
+.carrito {
+    position: relative;
+}
+.carrito .contador {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #f9f6f0;
+    color: #5a4638;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* Filtros y búsqueda */
+#barra-filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+#filtros {
+    display: flex;
+    gap: 1rem;
+}
+#filtros select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#busqueda {
+    display: flex;
+    align-items: center;
+}
+#buscar {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+.icono-lupa {
+    width: 20px;
+}
+
+/* Filtros activos */
+#filtros-activos {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.filtro-activo {
+    background-color: #5a4638;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.filtro-activo:hover {
+    background-color: #3e3227;
+}
+
+/* Productos - Carrusel */
+#productos-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Configuración para que los productos se desplacen en carrusel */
+#productos {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+.producto {
+    flex: 0 0 calc(22% - 1rem);
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.producto button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #5a4638;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.producto button:hover {
+    background-color: #3e3227;
+}
+
+/* Sección COMPRA Datos personales */
+main#datos-personales {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main#datos-personales h2 {
+    text-align: center;
+    color: #5a4638;
+    margin-bottom: 1rem;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-grupo label {
+    font-weight: bold;
+    color: #5a4638;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-grupo input,
+.form-grupo select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-botones button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-botones button[type="button"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.form-botones button[type="button"]:hover {
+    background-color: #a71d2a;
+}
+
+.form-botones button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.form-botones button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Selectores de direcciones (dependientes) (Seccion COMPRA Envio) */
+#envio select {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Sección COMPRA Pago */
+main#pago {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main#pago h2 {
+    text-align: center;
+    color: #5a4638;
+    margin-bottom: 1rem;
+}
+
+#resumen-datos {
+    background-color: #f9f6f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+#resumen-datos h3 {
+    color: #5a4638;
+    margin-bottom: 0.5rem;
+}
+
+#resumen-datos p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animación a los productos */
+.producto {
+    opacity: 0; /* Inicialmente invisible */
+    animation: aparecer 0.5s ease-in-out forwards;
+}
+
+
+
+/* Pie de página */
+footer {
+    background-color: #5a4638;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}

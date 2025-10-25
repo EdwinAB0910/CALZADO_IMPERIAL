@@ -1,0 +1,242 @@
+/* Estilos generales del carrito */
+body {
+    font-family: "Montserrat", serif;
+    background-color: #f9f6f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #5a4638;
+    color: white;
+    padding: 1rem;
+}
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+.logo h1 {
+    font-size: 1.5rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin-left: 1.5rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+nav ul li a.activo {
+    color: #f9a825;
+    font-weight: bold;
+}
+
+/* Carrito */
+.carrito {
+    position: relative;
+}
+.carrito .contador {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #f9f6f0;
+    color: #5a4638;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* Contenedor principal del carrito */
+#carrito-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Sección izquierda (productos) */
+#productos-carrito {
+    flex: 2;
+    padding-right: 20px;
+}
+
+/* Sección derecha (resumen de compra) */
+#resumen-carrito {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h2 {
+    font-size: 1.8rem;
+    color: #5a4638;
+    border-bottom: 2px solid #5a4638;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Ajuste general de la lista del carrito */
+#lista-carrito {
+    width: 100%;
+}
+
+/* Encabezados de la tabla */
+#encabezado-carrito {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-bottom: 2px solid #ddd;
+    text-align: center; /* Centra los textos */
+}
+
+/* Contenedor de cada producto */
+.item-carrito {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+    text-align: center; /* Centra los textos */
+}
+
+/* Imagen del producto */
+.item-carrito img {
+    width: 50px; /* Tamaño más compacto */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Sección de los detalles del producto */
+.detalle {
+    flex: 2;
+    padding: 0 10px;
+    text-align: left;
+}
+
+/* Estilo de los labels */
+.detalle label {
+    font-size: 0.8rem; /* Reducimos el tamaño del texto */
+    font-weight: normal;
+}
+
+/* Selects para la talla y color */
+.detalle select {
+    padding: 3px;
+    font-size: 0.8rem; /* Hacemos más pequeños los select */
+    width: 80px;
+}
+
+/* Controles de cantidad */
+
+
+.controles-cantidad button {
+    padding: 4px;
+    font-size: 0.75rem;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.controles-cantidad button:hover {
+    background-color: #bbb;
+}
+
+/* Botón de eliminar más pequeño */
+.detalle .eliminar {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    font-size: 0.75rem; /* Más compacto */
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.detalle .eliminar:hover {
+    background-color: #e63946;
+}
+
+.detalle label {
+    font-size: 0.75rem; /* Más pequeño */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.detalle select {
+    padding: 3px;
+    font-size: 0.75rem;
+    width: 70px; /* Ancho más reducido */
+}
+
+
+
+/* Resumen de compra */
+#resumen-carrito p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Botón de continuar compra */
+.continuar-compra {
+    display: block;
+    padding: 10px;
+    background-color: #5a4638;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.continuar-compra:hover {
+    background-color: #3e3227;
+}
+
+/* Pie de página */
+footer {
+    background-color: #5a4638;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
